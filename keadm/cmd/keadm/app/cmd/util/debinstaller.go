@@ -51,7 +51,8 @@ func (d *DebOS) InstallMQTT() error {
 	}
 
 	//Install mqttInst
-	cmd = NewCommand("apt-get install -y --allow-change-held-packages --allow-downgrades mosquitto")
+	//cmd = NewCommand("apt-get install -y --allow-change-held-packages --allow-downgrades mosquitto")
+	cmd = NewCommand("systemctl start mosquitto")
 	if err := cmd.Exec(); err != nil {
 		return err
 	}

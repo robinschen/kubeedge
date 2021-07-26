@@ -7,7 +7,8 @@ __pycache__
 *.swp
 .idea/*
 .gradle
-
+keadm/.idea/*
+keadm/cmd/keadm/.idea/
 cloud/cloudcore.log
 cloud/cloudcore
 cloud/admission

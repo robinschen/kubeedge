@@ -34,7 +34,7 @@ import (
 	"k8s.io/client-go/discovery"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
-	"k8s.io/klog/v2"
+	//"k8s.io/klog/v2"
 
 	types "github.com/kubeedge/kubeedge/keadm/cmd/keadm/app/cmd/common"
 	"github.com/kubeedge/kubeedge/pkg/apis/componentconfig/edgecore/v1alpha1"
@@ -257,7 +257,7 @@ func installKubeEdge(options types.InstallOptions, arch string, version semver.V
 	filePath := fmt.Sprintf("%s/%s", options.TarballPath, filename)
 	if _, err = os.Stat(filePath); err == nil {
 		fmt.Printf("Expected or Default KubeEdge version %v is already downloaded and will checksum for it. \n", version)
-		if success, _ := checkSum(filename, checksumFilename, version, options.TarballPath); !success {
+		/*if success, _ := checkSum(filename, checksumFilename, version, options.TarballPath); !success {
 			fmt.Printf("%v in your path checksum failed and do you want to delete this file and try to download again? \n", filename)
 			for {
 				confirm, err := askForconfirm()
@@ -281,7 +281,7 @@ func installKubeEdge(options types.InstallOptions, arch string, version semver.V
 			}
 		} else {
 			fmt.Println("Expected or Default KubeEdge version", version, "is already downloaded")
-		}
+		}*/
 	} else if !os.IsNotExist(err) {
 		return err
 	} else {

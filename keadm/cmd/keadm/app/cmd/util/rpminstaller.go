@@ -53,8 +53,8 @@ func (r *RpmOS) InstallMQTT() error {
 
 	// install MQTT
 	for _, command := range []string{
-		"yum -y install epel-release",
-		"yum -y install mosquitto",
+		//"yum -y install epel-release",
+		//"yum -y install mosquitto",
 		"systemctl start mosquitto",
 		"systemctl enable mosquitto",
 	} {
