@@ -1,1 +1,3 @@
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build keadm.go
+## CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build keadm.go
+
+bash build.sh
